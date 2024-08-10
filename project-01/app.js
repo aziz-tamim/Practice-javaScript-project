@@ -39,6 +39,7 @@ function checkRequired(inputArr) {
     }
   });
 }
+
 // Check input length
 function checkLength(input, min, max) {
   if (input.value.length < min) {
@@ -60,6 +61,7 @@ function checkLength(input, min, max) {
 function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
+
 // Check password maching
 function checkPasswordsMatch(input1, input2) {
   if (input1.value !== input2.value) {
