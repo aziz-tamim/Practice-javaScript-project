@@ -6,7 +6,21 @@ const movie = document.getElementById("movie");
 
 let ticketPrice = +movie.value;
 
-
+populate();
+function populate() {
+  const selectedSeat = JSON.parse(localStorage.getItem("selectedSeat"));
+  if (selectedSeat !== null && selectedSeat.length > 0) {
+    seats.forEach((seat, index) => {
+      if (selectedSeat.indexOf(index) > -1) {
+        seat.classList.add("selected");
+      }
+    });
+  }
+  const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+  if (selectedMovieIndex !== null) {
+    movie.selectedIndex = selectedMovieIndex;
+  }
+}
 
 function setMovieData(movieIndex, moviePrice) {
   localStorage.setItem("selectedMovieIndex", movieIndex);
