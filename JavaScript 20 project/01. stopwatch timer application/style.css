@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eb6385;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stopwatch {
+  width: 350px;
+  background-color: #ddd;
+  margin: 0 auto;
+  padding: 18px 12px;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.t-s {
+  text-align: start !important;
+  margin-bottom: 0px !important;
+  font-size: 18px;
+}
+.display {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.display span {
+  margin-right: 15px;
+}
+#minute {
+  margin-left: 15px;
+}
+#second {
+  margin-left: 15px;
+}
+#mili-second {
+  margin-left: 15px;
+}
+
+.controls {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 7px 18px;
+  border-radius: 6px;
+  border: none;
+  background-color: #eb6385;
+  transition: 0.3s;
+  cursor: pointer;
+  color: #fff;
+}
+
+.controls button:hover {
+  background-color: #d93d64;
+}
+
+#lap-times {
+  list-style: none;
+  padding: 12px 0;
+}
+
+#lap-times li {
+  margin-bottom: 10px;
+}
