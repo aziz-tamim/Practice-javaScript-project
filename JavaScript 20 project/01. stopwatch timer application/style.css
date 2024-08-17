@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #eb6385;
   width: 100%;
@@ -15,7 +14,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .stopwatch {
   width: 350px;
   background-color: #ddd;
@@ -24,7 +22,6 @@ body {
   border-radius: 0.3rem;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
 }
-
 .section-title {
   text-align: center;
   font-size: 22px;
@@ -43,7 +40,6 @@ body {
   font-size: 34px;
   margin-bottom: 18px;
 }
-
 .display span {
   margin-right: 15px;
 }
@@ -56,7 +52,6 @@ body {
 #mili-second {
   margin-left: 15px;
 }
-
 .controls {
   display: flex;
   list-style: none;
@@ -64,7 +59,6 @@ body {
   justify-content: center;
   margin-bottom: 20px;
 }
-
 .controls button {
   padding: 7px 18px;
   border-radius: 6px;
@@ -74,16 +68,13 @@ body {
   cursor: pointer;
   color: #fff;
 }
-
 .controls button:hover {
   background-color: #d93d64;
 }
-
 #lap-times {
   list-style: none;
   padding: 12px 0;
 }
-
 #lap-times li {
   margin-bottom: 10px;
 }
