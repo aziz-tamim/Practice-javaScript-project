@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript poll system</title>
+    <link rel="stylesheet" href="assets/css/style.css"  >
+</head>
+<body>
+    <div class="container">
+        <h1 class="section-title">poll system</h1>
+        <h2 class="content">What is your favorite programing language?</h2>
+        <div class="programing-language">
+            <button id="javaScript">JavaScript</button>
+            <button id="python">Python</button>
+            <button id="java">Java</button>
+            <button id="c">C++</button>
+        </div>
+        <div class="submit-center">
+            <button class="submit" id="submit">Submit Vote</button>
+        </div>
+        <div class="ranges">
+            <span class="lang">JavaScript</span>
+            <input type="range" class="range" id="jsRange" value="0" disabled>
+            <span class="percentage" id="jsPercentage">NaN%</span>
+        </div>
+
+        <div class="ranges">
+            <span class="lang">Python</span>
+            <input type="range" class="range" id="pythonRange" value="0" disabled>
+            <span class="percentage" id="pythonPercentage">NaN%</span>
+        </div>
+
+        <div class="ranges">
+            <span class="lang">Java</span>
+            <input type="range" class="range" id="javaRange" value="0" disabled>
+            <span class="percentage" id="javaPercentage">NaN%</span>
+        </div>
+
+        <div class="ranges">
+            <span class="lang">C++</span>
+            <input type="range" class="range" id="cppRange" value="0" disabled>
+            <span class="percentage" id="cppPercentage">NaN%</span>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
