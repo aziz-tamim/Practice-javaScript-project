@@ -42,9 +42,6 @@ body {
       border-radius: 6px;
       font-size: 15px;
       cursor: pointer; }
-      .container .programing-language button:focus {
-        background-color: #ff1f5ff3;
-        color: #fff; }
   .container .submit-center {
     text-align: center; }
     .container .submit-center .submit {
