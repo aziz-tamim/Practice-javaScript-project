@@ -7,23 +7,19 @@ let votes = {
 let selectedLanguage = null;
 
 document.getElementById("javascriptBtn").addEventListener("click", function () {
-  selectedLanguage = "javascript";
-  highlightSelectedButton("javascriptBtn");
+  selectLanguage("javascript", "javascriptBtn");
 });
 
 document.getElementById("pythonBtn").addEventListener("click", function () {
-  selectedLanguage = "python";
-  highlightSelectedButton("pythonBtn");
+  selectLanguage("python", "pythonBtn");
 });
 
 document.getElementById("javaBtn").addEventListener("click", function () {
-  selectedLanguage = "java";
-  highlightSelectedButton("javaBtn");
+  selectLanguage("java", "javaBtn");
 });
 
 document.getElementById("cppBtn").addEventListener("click", function () {
-  selectedLanguage = "cpp";
-  highlightSelectedButton("cppBtn");
+  selectLanguage("cpp", "cppBtn");
 });
 
 document.getElementById("submitBtn").addEventListener("click", function () {
@@ -33,9 +29,18 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   }
 });
 
+function selectLanguage(language, buttonId) {
+  if (selectedLanguage) {
+    document.getElementById(selectedLanguage + "Btn").style.backgroundColor =
+      "";
+    document.getElementById(selectedLanguage + "Btn").style.color = "";
+  }
+  selectedLanguage = language;
+  highlightSelectedButton(buttonId);
+}
+
 function updateRanges() {
   const totalVotes = votes.javascript + votes.python + votes.java + votes.cpp;
-
   const jsPercentage = Math.round((votes.javascript / totalVotes) * 100);
   const pythonPercentage = Math.round((votes.python / totalVotes) * 100);
   const javaPercentage = Math.round((votes.java / totalVotes) * 100);
@@ -55,11 +60,7 @@ function updateRanges() {
   document.getElementById("cppRange").value = cppPercentage;
   document.getElementById("cppPercentage").textContent = `${cppPercentage}%`;
 }
-
 function highlightSelectedButton(buttonId) {
-  const buttons = document.querySelectorAll(".programming-language button");
-  buttons.forEach((button) => (button.style.backgroundColor = ""));
-
   const selectedButton = document.getElementById(buttonId);
   selectedButton.style.backgroundColor = "#ff1f5ff3";
   selectedButton.style.color = "#fff";
