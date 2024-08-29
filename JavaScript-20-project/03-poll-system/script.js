@@ -60,6 +60,7 @@ function updateRanges() {
   document.getElementById("cppRange").value = cppPercentage;
   document.getElementById("cppPercentage").textContent = `${cppPercentage}%`;
 }
+
 function highlightSelectedButton(buttonId) {
   const selectedButton = document.getElementById(buttonId);
   selectedButton.style.backgroundColor = "#ff1f5ff3";
