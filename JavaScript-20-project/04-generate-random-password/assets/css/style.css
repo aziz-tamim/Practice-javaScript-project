@@ -62,3 +62,18 @@ body {
     margin-bottom: 12px; }
     .container .length-wrapper .password-length {
       font-weight: bold; }
+  .container .content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px; }
+  .container .generate-btn {
+    text-align: center;
+    margin-top: 20px; }
+    .container .generate-btn button {
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 3px;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+      font-weight: bold; }
