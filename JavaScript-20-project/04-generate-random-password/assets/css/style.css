@@ -19,3 +19,46 @@ body {
   border-radius: 4px;
   padding: 25px 20px;
   width: 400px; }
+  .container .section-title {
+    text-align: center;
+    color: #000;
+    text-decoration: underline;
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 500; }
+  .container .password-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eae4e4;
+    padding: 0 7px;
+    border-radius: 3px;
+    margin-bottom: 5px; }
+    .container .password-main #password {
+      border: none;
+      padding: 6px 0px;
+      background-color: #eae4e4;
+      width: 70%; }
+      .container .password-main #password:focus {
+        outline: none; }
+    .container .password-main i {
+      cursor: pointer;
+      font-size: 17px; }
+  .container .update-range {
+    width: 100%;
+    background-color: #eae4e4;
+    height: 4px;
+    border-radius: 3px;
+    margin-bottom: 10px; }
+  .container #range {
+    width: 100%;
+    margin-bottom: 18px;
+    cursor: pointer; }
+  .container .length-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px; }
+    .container .length-wrapper .password-length {
+      font-weight: bold; }

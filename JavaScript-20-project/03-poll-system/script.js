@@ -48,15 +48,12 @@ function updateRanges() {
 
   document.getElementById("jsRange").value = jsPercentage;
   document.getElementById("jsPercentage").textContent = `${jsPercentage}%`;
-
   document.getElementById("pythonRange").value = pythonPercentage;
   document.getElementById(
     "pythonPercentage"
   ).textContent = `${pythonPercentage}%`;
-
   document.getElementById("javaRange").value = javaPercentage;
   document.getElementById("javaPercentage").textContent = `${javaPercentage}%`;
-
   document.getElementById("cppRange").value = cppPercentage;
   document.getElementById("cppPercentage").textContent = `${cppPercentage}%`;
 }
