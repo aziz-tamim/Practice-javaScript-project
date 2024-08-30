@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>random-password-generator</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="container">
       <h1 class="section-title">Password Generator</h1>
-      <div class="Password-main">
+      <div class="password-main">
         <input type="text" id="password" />
         <i class="fa-regular fa-copy"></i>
       </div>
@@ -22,12 +25,24 @@
       </div>
       <div class="content">
         <p>Include LowerCase Letters (a-z)</p>
-        <i class="fa-solid fa-square-check"></i>
+        <input id="checkBox" type="checkbox">
       </div>
       <div class="content">
         <p>Include UpperCase Letters (A-Z)</p>
-        <i class="fa-solid fa-square-check"></i>
+        <input id="checkBox" type="checkbox">
+      </div>
+      <div class="content">
+        <p>Include Number (0-1)</p>
+        <input id="checkBox" type="checkbox">
+      </div>
+      <div class="content">
+        <p>Include Symbols (@.*)</p>
+        <input id="checkBox" type="checkbox">
+      </div>
+      <div class="generate-btn">
+        <button id="generatePassword">Generate Password</button>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
