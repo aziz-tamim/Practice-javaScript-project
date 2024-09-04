@@ -33,7 +33,6 @@ function generatePassword() {
   const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numberChars = "0123456789";
   const symbolChars = "@#$%^&*()_+~|}{[]:;?><,./-=";
-
   let availableChars = "";
   if (includeLowercase) availableChars += lowerChars;
   if (includeUppercase) availableChars += upperChars;

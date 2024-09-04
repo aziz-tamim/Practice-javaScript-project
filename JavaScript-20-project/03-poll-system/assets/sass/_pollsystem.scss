@@ -8,8 +8,8 @@
 }
 body {
   height: 100vh;
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #faf0f0;
   font-family: "Roboto", sans-serif;
@@ -54,8 +54,8 @@ body {
       border-radius: 6px;
       color: #fff;
       background-color: #ff1f5ff3;
-      margin-bottom: 20px;
       font-size: 16px;
+      margin-bottom: 20px;
       cursor: pointer;
       transition: 0.3s;
       &:hover {
@@ -78,8 +78,8 @@ body {
       width: 100%;
     }
     .percentage {
-      font-weight: 500;
       color: #ff1f5ff3;
+      font-weight: 500;
     }
   }
 }
