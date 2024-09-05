@@ -6,15 +6,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: "Roboto", sans-serif;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(0.25turn, #dcf1f5, #e8a4a9);
+    img {
+        width: 50px;
+    }
 }
-
 .container {
-
+    padding: 25px 20px;
+    background-color: #000;
+    width: 500px;
 }
