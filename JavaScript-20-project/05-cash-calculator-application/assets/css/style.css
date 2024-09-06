@@ -23,3 +23,49 @@ body {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px; }
+  .container .calculator-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    gap: 8px; }
+    .container .calculator-main:hover {
+      transform: scale(1.05); }
+    .container .calculator-main .height-34 {
+      height: 34px; }
+    .container .calculator-main img {
+      width: 80px; }
+    .container .calculator-main input {
+      width: 55%;
+      padding: 8px 4px;
+      border: 0;
+      border-radius: 2px; }
+      .container .calculator-main input:focus {
+        border-color: #ff008c;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(253, 12, 133, 0.25); }
+    .container .calculator-main .value {
+      padding-left: 12px;
+      color: #fff; }
+  .container .reset-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17px; }
+    .container .reset-btn .reset {
+      background-color: #ff8800;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 2px;
+      font-size: 17px; }
+  .container .total-cash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-weight: bold;
+    color: #fff; }
