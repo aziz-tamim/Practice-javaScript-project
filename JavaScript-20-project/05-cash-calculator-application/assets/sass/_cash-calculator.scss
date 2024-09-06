@@ -7,17 +7,43 @@
     box-sizing: border-box;
 }
 body {
+    color: #fff;
     font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(0.25turn, #dcf1f5, #e8a4a9);
-    img {
-        width: 50px;
-    }
 }
 .container {
     padding: 25px 20px;
     background-color: #000;
-    width: 500px;
+    width: 530px;
+    .section-title {
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .calculator-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 8px;
+        .height-34 {
+            height: 34px;
+        }
+        img {
+            width: 80px;
+        }
+        input {
+            width: 55%;
+            padding: 7px 4px;
+        }
+        .value {
+            padding-left: 12px;
+            color: #fff;
+        }
+    }
 }
