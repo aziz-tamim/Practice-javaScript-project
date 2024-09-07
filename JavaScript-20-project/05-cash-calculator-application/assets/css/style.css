@@ -46,7 +46,6 @@ body {
         outline: 0;
         box-shadow: 0 0 0 0.25rem rgba(253, 12, 133, 0.25); }
     .container .calculator-main .value {
-      padding-left: 12px;
       color: #fff; }
   .container .reset-btn {
     display: flex;
