@@ -24,9 +24,28 @@ function calculateTotal() {
     document.getElementById("value2000").textContent = value2000;
     document.getElementById("value500").textContent = value500;
     document.getElementById("value200").textContent = value200;
+    document.getElementById("value100").textContent = value100;
+    document.getElementById("value50").textContent = value50;
+    document.getElementById("value20").textContent = value20;
+    document.getElementById("value10").textContent = value10;
+    document.getElementById("value5").textContent = value5;
+    document.getElementById("value2").textContent = value2;
+    document.getElementById("value1").textContent = value1;
 
+    const totalCash = value2000 + value500 + value200 + value100 + value50 + value20 + value10 + value5 + value2 + value1;
+    document.getElementById("total-cash").textContent = totalCash;
 }
 
 document.querySelectorAll("input").forEach((input) => {
     input.addEventListener("input", calculateTotal);
+})
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+    document.querySelectorAll("input").forEach((input) => {
+        input.value = "";
+    });
+    document.querySelectorAll(".value").forEach((value) => {
+        value.textContent = "0";
+    })
+    document.getElementById("total-cash").textContent = "0";
 })

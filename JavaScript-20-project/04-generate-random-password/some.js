@@ -54,4 +54,4 @@ function calculateTotal() {
       value.textContent = "0";
     });
     document.getElementById("total-cash").textContent = "0";
-  });
+});
