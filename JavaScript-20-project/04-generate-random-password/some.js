@@ -23,7 +23,7 @@ function calculateTotal() {
     const value1 = note1 * 1;
   
     // Update values in the UI
-    document.getElementById("value2000").textContent = value2000;
+    document.getElementById("value2000").tedxtContent = value2000;
     document.getElementById("value500").textContent = value500;
     document.getElementById("value200").textContent = value200;
     document.getElementById("value100").textContent = value100;
