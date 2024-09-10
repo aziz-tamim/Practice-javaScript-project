@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 body {
-  display: flex;
-  flex-direction: column;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    padding: 30px 45px;
+    .section-title {
+        text-align: center;
+        margin-bottom: 15px;
+        text-decoration: underline;
+    }
 }
