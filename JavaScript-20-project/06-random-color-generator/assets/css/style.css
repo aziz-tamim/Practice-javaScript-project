@@ -16,3 +16,7 @@ body {
     margin-bottom: 15px;
     text-decoration: underline;
     font-size: 24px; }
+  .container .color-body-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px; }
