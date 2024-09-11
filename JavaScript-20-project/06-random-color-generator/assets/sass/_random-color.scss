@@ -21,9 +21,11 @@ body {
     .color-body-wrapper {
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
     }
     .color-body {
-        
+        width: 120px;
+        height: 120px;
+        border: 1.5px solid #000;
     }
 }

@@ -7,7 +7,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto" sans-serif; }
 
 .container {
   padding: 30px 45px; }
@@ -19,4 +19,8 @@ body {
   .container .color-body-wrapper {
     display: flex;
     justify-content: center;
-    gap: 10px; }
+    gap: 8px; }
+  .container .color-body {
+    width: 120px;
+    height: 120px;
+    border: 1.5px solid #000; }
