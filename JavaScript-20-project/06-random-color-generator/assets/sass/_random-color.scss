@@ -27,5 +27,31 @@ body {
         width: 120px;
         height: 120px;
         border: 1.5px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 3px;
+        margin-bottom: 8px;
+        background-color: #08aac6;
+        cursor: pointer;
+        p {
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        button {
+            color: #000;
+            border: 1.2px solid #ff0048;
+            background-color: #ff00bf;
+            border-radius: 2px;
+            padding:  4px 8px;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: #e85ac5;
+                border: 1.2px solid#e85ac5;
+            }
+        }
     }
 }
