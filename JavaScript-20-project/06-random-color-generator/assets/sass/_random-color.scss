@@ -43,14 +43,14 @@ body {
         button {
             color: #000;
             border: 1.2px solid #ff0048;
-            background-color: #ff00bf;
+            background-color: #e85ac5;
             border-radius: 2px;
             padding:  4px 8px;
             cursor: pointer;
             transition: .3s;
             &:hover {
-                background-color: #e85ac5;
-                border: 1.2px solid#e85ac5;
+                background-color: #ff00bf;
+                border: 1.2px solid #ff00bf;
             }
         }
     }
