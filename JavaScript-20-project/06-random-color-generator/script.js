@@ -19,17 +19,15 @@ function applyRandomColors() {
 }
 
 function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        alert(`Copied: ${text}`)
-    })
+  navigator.clipboard.writeText(text).then(() => {
+    alert(`Copied: ${text}`);
+  });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    applyRandomColors();
-    const copyButtons = document.querySelectorAll("copyCode")
-    copyButtons.forEach(function(button) {
-        button.addEventListener("click", function () {
-            
-        })
-    })
-})
+document.addEventListener("DOMContentLoaded", function () {
+  applyRandomColors();
+  const copyButtons = document.querySelectorAll("copyCode");
+  copyButtons.forEach(function (button) {
+    button.addEventListener("click", function () {});
+  });
+});
