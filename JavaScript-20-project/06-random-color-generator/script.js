@@ -17,3 +17,19 @@ function applyRandomColors() {
     colorCodeElement.textContent = randomColor;
   });
 }
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert(`Copied: ${text}`)
+    })
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    applyRandomColors();
+    const copyButtons = document.querySelectorAll("copyCode")
+    copyButtons.forEach(function(button) {
+        button.addEventListener("click", function () {
+            
+        })
+    })
+})
