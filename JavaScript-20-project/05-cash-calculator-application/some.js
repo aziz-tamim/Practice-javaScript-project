@@ -21,7 +21,7 @@ function getRandomHexColor() {
     navigator.clipboard.writeText(text).then(() => {
       alert(`Copied: ${text}`);
     }).catch(err => {
-      console.error('Could not copy text: ', err);
+      console.error('could not copy text: ', err);
     });
   }
 
