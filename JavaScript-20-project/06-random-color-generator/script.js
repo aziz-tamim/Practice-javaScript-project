@@ -26,8 +26,14 @@ function copyToClipboard(text) {
 
 document.addEventListener("DOMContentLoaded", function () {
   applyRandomColors();
-  const copyButtons = document.querySelectorAll("copyCode");
+  const copyButtons = document.querySelectorAll(".copyCode");
   copyButtons.forEach(function (button) {
-    button.addEventListener("click", function () {});
+    button.addEventListener("click", function () {
+        const colorCodeId = this.getAttribute("data-color");
+        const colorCodeElement = document.getElementById(colorCodeId);
+        const colorCode = colorCodeElement.textContent;
+        
+        copyToClipboard(colorCode);
+    });
   });
 });
