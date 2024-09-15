@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const colorCodeId = this.getAttribute("data-color");
         const colorCodeElement = document.getElementById(colorCodeId);
         const colorCode = colorCodeElement.textContent;
-        
+
         copyToClipboard(colorCode);
     });
   });

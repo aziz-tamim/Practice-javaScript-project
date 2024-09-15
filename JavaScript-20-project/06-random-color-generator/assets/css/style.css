@@ -43,7 +43,7 @@ body {
       border-radius: 2px;
       padding: 4px 8px;
       cursor: pointer;
-      transition: .3s; }
+      transition: 0.3s; }
       .container .color-body button:hover {
         background-color: #ff00bf;
         border: 1.2px solid #ff00bf; }
