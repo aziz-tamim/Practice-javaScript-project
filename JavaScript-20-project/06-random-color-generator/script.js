@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const copyButtons = document.querySelectorAll(".copyCode");
   copyButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-        const colorCodeId = this.getAttribute("data-color");
-        const colorCodeElement = document.getElementById(colorCodeId);
-        const colorCode = colorCodeElement.textContent;
+      const colorCodeId = this.getAttribute("data-color");
+      const colorCodeElement = document.getElementById(colorCodeId);
+      const colorCode = colorCodeElement.textContent;
 
-        copyToClipboard(colorCode);
+      copyToClipboard(colorCode);
     });
   });
 });
