@@ -1,0 +1,1 @@
+const noteBtn = document.getElementById("addNote");
