@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="note_taking">
     <button class="note-add" id="addNote"><span>+</span>Add Note</button>
-    <div class="note-wrapper">
-        <div class="icon-wrapper">
-            <i id="save" class="fa-solid fa-floppy-disk"></i>
-            <i id="trash" class="fa-solid fa-trash"></i>
+    <div class="container">
+        <div class="row">
+            <div class="note_taking__item">
+                <div class="note_taking__item__icons">
+                    <i id="save" class="fa-solid fa-floppy-disk"></i>
+                    <i id="trash" class="fa-solid fa-trash"></i>
+                </div>
+                <textarea name="note" id="noteText" rows="20" cols="30"></textarea>
+            </div>
         </div>
-        <textarea name="note" id="noteText" rows="20" cols="30"></textarea>
+    </div>
     </div>
 </body>
 

@@ -1,5 +1,5 @@
 const addNoteButton = document.getElementById("addNote");
-const noteWrapper = document.querySelector(".note-wrapper");
+const noteWrapper = document.querySelector(".row");
 
 window.addEventListener("DOMContentLoaded", loadNotes);
 
@@ -10,8 +10,8 @@ function createNoteElement(noteContent ="") {
     const saveIcon = document.createElement("i");
     const trashIcon = document.createElement("i");
 
-    noteDiv.classList.add("note");
-    iconWrapper.classList.add("icon-wrapper");
+    noteDiv.classList.add("note_taking__item");
+    iconWrapper.classList.add("note_taking__item__icons");
     saveIcon.classList.add("fa-solid", "fa-floppy-disk");
     trashIcon.classList.add("fa-solid", "fa-trash");
 
