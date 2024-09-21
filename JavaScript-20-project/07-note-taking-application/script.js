@@ -1,61 +1,65 @@
-const addNoteButton = document.getElementById("addNote");
-const noteWrapper = document.querySelector(".row");
+document.addEventListener('DOMContentLoaded', loadNotes);
 
-window.addEventListener("DOMContentLoaded", loadNotes);
+const addNoteButton = document.getElementById('addNote');
+const notesContainer = document.getElementById('notesContainer');
 
-function createNoteElement(noteContent ="") {
-    const noteDiv = document.createElement("div");
-    const textArea = document.createElement("textarea");
-    const iconWrapper = document.createElement("div");
-    const saveIcon = document.createElement("i");
-    const trashIcon = document.createElement("i");
+addNoteButton.addEventListener('click', function() {
+  addNewNote();
+});
 
-    noteDiv.classList.add("note_taking__item");
-    iconWrapper.classList.add("note_taking__item__icons");
-    saveIcon.classList.add("fa-solid", "fa-floppy-disk");
-    trashIcon.classList.add("fa-solid", "fa-trash");
+function addNewNote(text = '', id = Date.now()) {
+  const noteElement = document.createElement('div');
+  noteElement.classList.add('note_taking__item');
+  noteElement.setAttribute('data-id', id);
+  noteElement.innerHTML = `
+    <div class="note_taking__item__icons">
+      <i id="save" class="fa-solid fa-floppy-disk save-note"></i>
+      <i id="trash" class="fa-solid fa-trash delete-note"></i>
+    </div>
+    <textarea name="note" id="noteText" rows="20" cols="30">${text}</textarea>
+  `;
+  noteElement.querySelector('.save-note').addEventListener('click', function() {
+    saveNoteLocalStorage(noteElement);
+  });
+  noteElement.querySelector('.delete-note').addEventListener('click', function() {
+    deleteNoteLocalStorage(noteElement);
+    noteElement.remove();
+  });
 
-    textArea.rows = 10;
-    textArea.cols = 30;
-    textArea.value = noteContent;
-
-    iconWrapper.appendChild(saveIcon);
-    iconWrapper.appendChild(trashIcon);
-    noteDiv.appendChild(iconWrapper);
-    noteDiv.appendChild(textArea);
-    noteWrapper.appendChild(noteDiv);
-
-    saveIcon.addEventListener("click", function () {
-        saveNotes();
-    });
-
-    trashIcon.addEventListener("click", function () {
-        noteDiv.remove();
-        saveNotes();
-    });
+  notesContainer.appendChild(noteElement);
 }
 
-function saveNotes() {
-    const allNotes = document.querySelectorAll("textarea");
-    const notesArray = [];
+function saveNoteLocalStorage(noteElement) {
+  const textarea = noteElement.querySelector('textarea');
+  const noteId = noteElement.getAttribute('data-id');
+  const noteContent = textarea.value;
 
-    allNotes.forEach(note => {
-        notesArray.push(note.value);
-    });
+  let notes = JSON.parse(localStorage.getItem('notes')) || [];
+  const existingNote = notes.find(note => note.id === noteId);
 
-    localStorage.setItem("notes", JSON.stringify(notesArray));
+  if (existingNote) {
+    existingNote.content = noteContent;
+  } else {
+    notes.push({ id: noteId, content: noteContent });
+  }
+  localStorage.setItem('notes', JSON.stringify(notes));
+}
+
+function deleteNoteLocalStorage(noteElement) {
+  const noteId = noteElement.getAttribute('data-id');
+  let notes = JSON.parse(localStorage.getItem('notes')) || [];
+  notes = notes.filter(note => note.id != noteId);
+  localStorage.setItem('notes', JSON.stringify(notes));
 }
 
 function loadNotes() {
-    const savedNotes = JSON.parse(localStorage.getItem("notes"));
-
-    if (savedNotes) {
-        savedNotes.forEach(noteContent => {
-            createNoteElement(noteContent);
-        });
+    const notes = JSON.parse(localStorage.getItem('notes')) || [];
+    if (notes.length === 0) {
+      addNewNote('', Date.now());
+    } else {
+      notes.forEach(note => {
+        addNewNote(note.content, note.id);
+      });
     }
-}
+  }
 
-addNoteButton.addEventListener("click", function () {
-    createNoteElement();
-});
