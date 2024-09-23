@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0.25turn, #d3696c, #dea768); }
+
+.dictionary {
+  background-color: #fff;
+  padding: 18px 12px;
+  border-radius: 3px;
+  width: 370px; }
+  .dictionary_title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 18px; }
+  .dictionary_item {
+    display: flex;
+    gap: 8px; }
+    .dictionary_item input {
+      width: 100%;
+      padding: 6px 4px;
+      border: 0; }
+    .dictionary_item button {
+      background-color: #c74f53;
+      border: 0;
+      cursor: pointer;
+      border-radius: 3px;
+      color: #fff;
+      padding: 8px 14px;
+      font-size: 15px; }
