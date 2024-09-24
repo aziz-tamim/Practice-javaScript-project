@@ -22,14 +22,14 @@ body {
     text-align: center;
     font-size: 22px;
     margin-bottom: 18px; }
-  .dictionary_item {
+  .dictionary__item {
     display: flex;
     gap: 8px; }
-    .dictionary_item input {
+    .dictionary__item input {
       width: 100%;
       padding: 6px 4px;
       border: 0px; }
-    .dictionary_item button {
+    .dictionary__item button {
       background-color: #c74f53;
       border: 0;
       cursor: pointer;
@@ -38,5 +38,5 @@ body {
       padding: 8px 14px;
       font-size: 15px;
       transition: 0.3s; }
-      .dictionary_item button:hover {
+      .dictionary__item button:hover {
         background-color: #726060; }
