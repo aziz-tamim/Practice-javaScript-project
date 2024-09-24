@@ -1,50 +1,50 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(0.25turn, #d3696c, #dea768)
+  font-family: "Roboto", sans-serif;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0.25turn, #d3696c, #dea768);
 }
 
 .dictionary {
-    background-color: #fff;
-    padding: 18px 12px;
-    border-radius: 3px;
-    width: 370px;
-    &_title{
-        text-align: center;
-        font-size: 22px;
-        margin-bottom: 18px;
+  background-color: #fff;
+  padding: 18px 12px;
+  border-radius: 3px;
+  width: 370px;
+  &_title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  &_item {
+    display: flex;
+    gap: 8px;
+    input {
+      width: 100%;
+      padding: 6px 4px;
+      border: 0;
     }
-    &_item {
-        display: flex;
-        gap: 8px;
-        input {
-            width: 100%;
-            padding: 6px 4px;
-            border: 0;
-        }
-        button {
-            background-color: #c74f53;
-            border: 0;
-            cursor: pointer;
-            border-radius: 3px;
-            color: #fff;
-            padding: 8px 14px;
-            font-size: 15px;
-            transition: 0.3s;
-            &:hover {
-                background-color: #726060;
-            }
-        }
+    button {
+      background-color: #c74f53;
+      border: 0;
+      cursor: pointer;
+      border-radius: 3px;
+      color: #fff;
+      padding: 8px 14px;
+      font-size: 15px;
+      transition: 0.3s;
+      &:hover {
+        background-color: #726060;
+      }
     }
+  }
 }
