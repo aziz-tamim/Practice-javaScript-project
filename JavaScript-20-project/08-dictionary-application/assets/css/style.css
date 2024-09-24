@@ -36,4 +36,7 @@ body {
       border-radius: 3px;
       color: #fff;
       padding: 8px 14px;
-      font-size: 15px; }
+      font-size: 15px;
+      transition: 0.3s; }
+      .dictionary_item button:hover {
+        background-color: #726060; }
