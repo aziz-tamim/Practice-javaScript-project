@@ -6,18 +6,24 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Roboto", sans-serif;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(0.25turn, #d3696c, #dea768); }
+  font-family: "Roboto", sans-serif; }
 
 .dictionary {
-  background-color: #fff;
-  padding: 18px 12px;
-  border-radius: 3px;
-  width: 370px; }
+  background: linear-gradient(0.25turn, #d3696c, #dea768);
+  height: 100vh; }
+  .dictionary .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center; }
+  .dictionary__wrapper {
+    padding: 18px 12px;
+    border-radius: 5px;
+    width: 400px;
+    background: #fff; }
   .dictionary_title {
     text-align: center;
     font-size: 22px;
