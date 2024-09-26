@@ -11,12 +11,12 @@ function addNewNote(text = "", id = Date.now()) {
   noteElement.classList.add("note_taking__item");
   noteElement.setAttribute("data-id", id);
   noteElement.innerHTML = `
-    <div class="note_taking__item__icons">
-      <i id="save" class="fa-solid fa-floppy-disk save-note"></i>
-      <i id="trash" class="fa-solid fa-trash delete-note"></i>
-    </div>
-    <textarea name="note" id="noteText" rows="20" cols="30">${text}</textarea>
-  `;
+  <div class="note_taking__item__icons">
+    <i id="save" class="fa-solid fa-floppy-disk save-note"></i>
+    <i id="trash" class="fa-solid fa-trash delete-note"></i>
+  </div>
+  <textarea name="note" id="noteText" rows="20" cols="30">${text}</textarea>
+`;
   noteElement
     .querySelector(".save-note")
     .addEventListener("click", function () {
@@ -28,8 +28,7 @@ function addNewNote(text = "", id = Date.now()) {
       deleteNoteLocalStorage(noteElement);
       noteElement.remove();
     });
-
-  notesContainer.appendChild(noteElement);
+  notesContainer.appendChild("noteElement");
 }
 
 function saveNoteLocalStorage(noteElement) {
@@ -37,9 +36,8 @@ function saveNoteLocalStorage(noteElement) {
   const noteId = noteElement.getAttribute("data-id");
   const noteContent = textarea.value;
 
-  let notes = JSON.parse(localStorage.getItem("notes")) || [];
-  const existingNote = notes.find((note) => note.id === noteId);
-
+  let notes = JSON.parse(localStorage.getItem("notes")) || {};
+  const existingNotes = notes.find((note) => note.id === noteId);
   if (existingNote) {
     existingNote.content = noteContent;
   } else {
@@ -57,11 +55,7 @@ function deleteNoteLocalStorage(noteElement) {
 
 function loadNotes() {
   const notes = JSON.parse(localStorage.getItem("notes")) || [];
-  if (notes.length === 0) {
-    addNewNote("", Date.now());
-  } else {
-    notes.forEach((note) => {
-      addNewNote(note.content, note.id);
-    });
+  if () {
+    
   }
 }

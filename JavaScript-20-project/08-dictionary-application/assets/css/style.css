@@ -36,7 +36,7 @@ body {
       padding: 6px 4px;
       border: 0px; }
     .dictionary__item button {
-      background-color: #c74f53;
+      background-color: #fc5c61;
       border: 0;
       cursor: pointer;
       border-radius: 3px;
@@ -45,4 +45,4 @@ body {
       font-size: 15px;
       transition: 0.3s; }
       .dictionary__item button:hover {
-        background-color: #726060; }
+        background-color: #e08383; }
