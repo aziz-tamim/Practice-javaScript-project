@@ -7,7 +7,7 @@ addNoteButton.addEventListener("click", function () {
 });
 
 function addNewNote(text = "", id = Date.now()) {
-  const noteElement = document.createElement("div"); 
+  const noteElement = document.createElement("div");
   noteElement.classList.add("note_taking__item");
   noteElement.setAttribute("data-id", id);
   noteElement.innerHTML = `
@@ -21,7 +21,7 @@ function addNewNote(text = "", id = Date.now()) {
     .querySelector(".save-note")
     .addEventListener("click", function () {
       saveNoteLocalStorage(noteElement);
-    });
+  });
   noteElement
     .querySelector(".delete-note")
     .addEventListener("click", function () {
