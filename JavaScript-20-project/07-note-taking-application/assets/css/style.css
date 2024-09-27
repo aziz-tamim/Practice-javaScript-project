@@ -3,47 +3,56 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(0.25turn, #e74e93, #ff6f79); }
+  background: linear-gradient(0.25turn, #e74e93, #ff6f79);
+}
 
 .note_taking {
-  padding-top: 20px; }
-  .note_taking .container {
-    max-width: 1024px;
-    margin: 0 auto; }
-    .note_taking .container .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      width: 100%;
-      justify-content: center; }
-  .note_taking__item {
-    width: 300px;
-    background-color: #262930;
-    border-radius: 10px;
-    overflow: hidden; }
-    .note_taking__item__icons {
-      background-color: #030b1a;
-      display: flex;
-      justify-content: flex-end;
-      padding: 10px;
-      gap: 12px;
-      color: #fff;
-      cursor: pointer; }
-    .note_taking__item textarea {
-      background-color: transparent;
-      border: none;
-      height: 200px;
-      padding: 10px;
-      color: #fff;
-      width: 100%;
-      display: block; }
-      .note_taking__item textarea:focus {
-        outline: none;
-        background-color: #30333b; }
+  padding-top: 20px;
+}
+.note_taking .container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.note_taking .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+.note_taking__item {
+  width: 300px;
+  background-color: #262930;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.note_taking__item__icons {
+  background-color: #030b1a;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  gap: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+.note_taking__item textarea {
+  background-color: transparent;
+  border: none;
+  height: 200px;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  display: block;
+}
+.note_taking__item textarea:focus {
+  outline: none;
+  background-color: #30333b;
+}
 
 .note-add {
   display: flex;
@@ -56,9 +65,12 @@ body {
   background-color: #1d9105;
   border: 0;
   border-radius: 5px;
-  transition: 0.3s; }
-  .note-add:hover {
-    background-color: #69d753; }
-  .note-add span {
-    margin-right: 4px;
-    font-size: 17px; }
+  transition: 0.3s;
+}
+.note-add:hover {
+  background-color: #69d753;
+}
+.note-add span {
+  margin-right: 4px;
+  font-size: 17px;
+}
