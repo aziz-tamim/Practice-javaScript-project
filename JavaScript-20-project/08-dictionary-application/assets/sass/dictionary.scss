@@ -31,6 +31,25 @@ body {
         padding: 15px 12px;
         display: none;
       }
+      h3 {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .sound-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .sound-icon {
+        font-size: 22px;
+        padding: 7px;
+        cursor: pointer;
+        background-color: #fc5c61;
+        border: none;
+        border-radius: 50%;
+      }
     }
     &_title {
       text-align: center;
@@ -59,25 +78,6 @@ body {
           background-color: #e08383;
         }
       }
-    }
-    h3 {
-      margin-bottom: 10px;
-    }
-    p {
-      margin-bottom: 10px;
-    }
-    .sound-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .sound-icon {
-      font-size: 22px;
-      padding: 7px;
-      cursor: pointer;
-      background-color: #fc5c61;
-      border: none;
-      border-radius: 50%;
     }
   }
 }
