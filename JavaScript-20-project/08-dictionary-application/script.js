@@ -3,6 +3,7 @@ document.getElementById('searchBtn').addEventListener("click", function() {
    fetch('./frog.json')
     .then(response => response.json())
     .then(data => {
+        const wordData = data.find(entry => entry.word.toLowerCase() === inputWord);
         
     })
 });
