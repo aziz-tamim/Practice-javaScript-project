@@ -7,42 +7,41 @@
 
 body {
   font-family: "Roboto", sans-serif; }
-
-.dictionary {
-  background: linear-gradient(0.25turn, #d3696c, #dea768);
-  height: 100vh; }
-  .dictionary .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center; }
-  .dictionary__wrapper {
-    padding: 18px 12px;
-    border-radius: 5px;
-    width: 400px;
-    background: #fff; }
-  .dictionary_title {
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 18px; }
-  .dictionary__item {
-    display: flex;
-    gap: 8px; }
-    .dictionary__item input {
-      width: 100%;
-      padding: 6px 4px;
-      border: 0px; }
-    .dictionary__item button {
-      background-color: #fc5c61;
-      border: 0;
-      cursor: pointer;
-      border-radius: 3px;
-      color: #fff;
-      padding: 8px 14px;
-      font-size: 15px;
-      transition: 0.3s; }
-      .dictionary__item button:hover {
-        background-color: #e08383; }
+  body .dictionary {
+    background: linear-gradient(0.25turn, #d3696c, #dea768);
+    height: 100vh; }
+    body .dictionary .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: center; }
+    body .dictionary__wrapper {
+      padding: 18px 12px;
+      border-radius: 5px;
+      width: 400px;
+      background: #fff; }
+    body .dictionary_title {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 18px; }
+    body .dictionary__item {
+      display: flex;
+      gap: 8px; }
+      body .dictionary__item input {
+        width: 100%;
+        padding: 6px 4px;
+        border: 0px; }
+      body .dictionary__item button {
+        background-color: #fc5c61;
+        border: 0;
+        cursor: pointer;
+        border-radius: 3px;
+        color: #fff;
+        padding: 8px 14px;
+        font-size: 15px;
+        transition: 0.3s; }
+        body .dictionary__item button:hover {
+          background-color: #e08383; }

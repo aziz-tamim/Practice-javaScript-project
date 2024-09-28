@@ -40,7 +40,7 @@ function calculateTotal() {
     value50 +
     value20 +
     value10 +
-    value5 +  
+    value5 +
     value2 +
     value1;
   document.getElementById("total-cash").textContent = totalCash;

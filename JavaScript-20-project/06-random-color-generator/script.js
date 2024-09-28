@@ -19,8 +19,8 @@ function applyRandomColors() {
 }
 
 function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    alert(`Copied: ${text}`);
+  navigator.clipboard.writeText(text).then(function () {
+    alert(`Color Copied: ${text}`);
   });
 }
 
