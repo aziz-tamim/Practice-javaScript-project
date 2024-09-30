@@ -30,7 +30,6 @@ function displayResult(wordData) {
   firstTwoMeanings.forEach((meaning) => {
     const resultItem = document.createElement("div");
     resultItem.className = "result-item";
-
     
   });
 }
