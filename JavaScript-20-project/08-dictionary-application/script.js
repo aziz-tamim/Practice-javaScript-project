@@ -10,10 +10,6 @@ document.getElementById("searchBtn").addEventListener("click", function () {
       );
       if (wordData) {
         displayResult(wordData);
-      } else {
-        document.getElementById("result").innerHTML =
-          "<p>Word not found in dictionary.</p>";
-        document.getElementById("result").style.display = "block";
       }
     });
 });
@@ -30,6 +26,35 @@ function displayResult(wordData) {
   firstTwoMeanings.forEach((meaning) => {
     const resultItem = document.createElement("div");
     resultItem.className = "result-item";
-    
+
+    const partOfSpeech = document.createElement('p');
+    partOfSpeech.innerHTML = `<strong>Part of Speech:</strong>${meaning.partOfSpeech}`;
+    resultItem.appendChild(partOfSpeech);
+
+    const firstDefinition = meaning.definitions[0];
+    if (firstDefinition) {
+        const definitions = document.createElement('p');
+        definitions.innerHTML = `<strong>Definition:</strong>${firstDefinition.definitions}`;
+        resultItem.appendChild(definitions);
+    }
+    resultDiv.appendChild(resultItem);
   });
+
+  const phonetics = wordData.phonetics.find(p => p.audio);
+  if(phonetics && phonetics.audio) {
+    const soundContainer = document.createElement('div');
+    soundContainer.className = 'sound-container';
+
+    const soundIcon = document.createElement('button');
+    soundIcon.innerHTML = '🔊';
+    soundIcon.className = 'sound-icon';
+
+    soundIcon.addEventListener("click", function() {
+        new Audio(phonetics.audio).play();
+
+    });
+    soundContainer.appendChild(soundIcon);
+    resultDiv.appendChild(soundContainer);
+  }
+  resultDiv.style.display = 'block';
 }
