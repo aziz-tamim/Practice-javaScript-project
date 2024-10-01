@@ -11,9 +11,13 @@ function fadeOut() {
 function textAnimation() {
     fadeIn();
     setTimeout(function() {
-        fadeOut()
+        fadeOut();
     }, 100);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    textAnimation();
+})
 
 document.addEventListener('DOMContentLoaded', function() {
     textAnimation();
