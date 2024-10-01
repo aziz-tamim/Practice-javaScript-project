@@ -20,16 +20,12 @@ body {
   text-align: center;
   #animatedText {
     color: #ff82e0;
-    font-size: 45px;
+    font-size: 50px;
     transition: opacity 2s ease-in-out;
-  }
-}
-
-#animatedText {
     display: block;
-    font-size: 2rem;
     font-weight: 700;
     animation: moveInRight 1s ease-out;
+  }
 }
 
 @keyframes moveInRight {

@@ -18,14 +18,11 @@ body {
   text-align: center; }
   .text-container #animatedText {
     color: #ff82e0;
-    font-size: 45px;
-    transition: opacity 2s ease-in-out; }
-
-#animatedText {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  animation: moveInRight 1s ease-out; }
+    font-size: 50px;
+    transition: opacity 2s ease-in-out;
+    display: block;
+    font-weight: 700;
+    animation: moveInRight 1s ease-out; }
 
 @keyframes moveInRight {
   0% {
