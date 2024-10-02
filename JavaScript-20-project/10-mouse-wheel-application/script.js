@@ -13,4 +13,5 @@ window.addEventListener('wheel', function(event) {
     }
 
     zoomableElement.style.transform = `scale(${scale})`;
+    
 });
