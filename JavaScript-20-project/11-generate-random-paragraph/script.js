@@ -1,10 +1,13 @@
-const numberParagraph = document.getElementById('items').value;
-const dataDiv = document.getElementById('data');
-
-dataDiv.innerHTML = '';
-
-for (let i = 0; i < numberParagraph; i++) {
+function generate() {
+    const numberParagraph = document.getElementById('items').value;
+    const dataDiv = document.getElementById('data');
     
+    dataDiv.innerHTML = '';
+    
+    for (let i = 0; i < numberParagraph; i++) {
+        const paragraph = document.createElement('p');
+        paragraph.innerText = generateRandomParagraph();
+    }
 }
 
 function generateRandomParagraph() {
@@ -20,5 +23,8 @@ function generateRandomParagraph() {
         "Morbi id saoien nec dui gravida pretium  a vel lacus.",
         "Quisque ac felis auctor, fermentum nulla at, tempus velit."
     ];
-    
+    const sentenceCount = Math.floor(Math.random * 5) + 3;
+    let paragraph = '';
+
+
 }
