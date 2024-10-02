@@ -40,3 +40,5 @@ body {
       cursor: pointer;
       padding: 6px 12px;
       border-radius: 4px; }
+    body .paragraph .row p {
+      margin-bottom: 10px; }

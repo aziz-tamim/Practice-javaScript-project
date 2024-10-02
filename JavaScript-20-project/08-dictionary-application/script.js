@@ -34,7 +34,7 @@ function displayResult(wordData) {
     const firstDefinition = meaning.definitions[0];
     if (firstDefinition) {
         const definitions = document.createElement('p');
-        definitions.innerHTML = `<strong>Definition:</strong>${firstDefinition.definitions}`;
+        definitions.innerHTML = `<strong>Definition:</strong>${firstDefinition.definition}`;
         resultItem.appendChild(definitions);
     }
     resultDiv.appendChild(resultItem);
