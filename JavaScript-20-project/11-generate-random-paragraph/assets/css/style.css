@@ -39,6 +39,7 @@ body {
       background-color: #fa6203;
       cursor: pointer;
       padding: 6px 12px;
-      border-radius: 4px; }
+      border-radius: 4px;
+      margin-bottom: 15px; }
     body .paragraph .row p {
       margin-bottom: 10px; }
