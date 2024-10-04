@@ -1,64 +1,65 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    background-color: #f1e9e9;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  background-color: #f1e9e9;
 
-    .calculator {
-        background-color: #fff;
-        padding: 22px 16px 22px 25px;
-        width: 480px;
-        border-radius: 5px;
-        border: 1px solid #939393;
-        &__title {
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 20px;
-            text-decoration: underline;
-        }
-        label {
-            display: block;
-            font-size: 17px;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        input {
-            margin-bottom: 13px;
-            padding: 5px 8px;
-            width: 100%;
-        }
-
-        .result {
-            background-color: #f2f2f2;
-            border: 1px solid #9f9f9f;
-            padding: 8px 10px;
-            border-radius: 3px;
-        }
-
-        .calculate-btn {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
-            button {
-                color: #fff;
-                background-color: #1fa418;
-                cursor: pointer;
-                border: none;
-                padding: 6px 12px;
-                border-radius: 3px;
-                font-size: 20px;
-            }
-        }
+  .calculator {
+    background-color: #fff;
+    padding: 22px 16px 22px 25px;
+    width: 480px;
+    border-radius: 5px;
+    border: 1px solid #939393;
+    &__title {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 20px;
+      text-decoration: underline;
     }
+    label {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input {
+      margin-bottom: 13px;
+      padding: 5px 8px;
+      width: 100%;
+    }
+
+    .result {
+      background-color: #f2f2f2;
+      border: 1px solid #9f9f9f;
+      padding: 10px 12px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    .calculate-btn {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+      button {
+        color: #fff;
+        background-color: #1fa418;
+        cursor: pointer;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 3px;
+        font-size: 20px;
+      }
+    }
+  }
 }

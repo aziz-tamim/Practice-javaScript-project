@@ -35,8 +35,9 @@ body {
     body .calculator .result {
       background-color: #f2f2f2;
       border: 1px solid #9f9f9f;
-      padding: 8px 10px;
-      border-radius: 3px; }
+      padding: 10px 12px;
+      border-radius: 3px;
+      font-weight: bold; }
     body .calculator .calculate-btn {
       display: flex;
       justify-content: center;
