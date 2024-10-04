@@ -6,5 +6,5 @@ document.getElementById("calculate").addEventListener("click", function() {
     const monthlyPayment = (loanAmount * interestRate);
 
     const totalInterest = (monthlyPayment * loanTerm) - loanAmount;
-
+    
 });
