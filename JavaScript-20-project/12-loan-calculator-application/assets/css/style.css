@@ -6,4 +6,35 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  background-color: #f1e9e9; }
+  body .calculator {
+    background-color: #fff;
+    padding: 22px 16px 22px 25px;
+    width: 480px;
+    border-radius: 5px;
+    border: 1px solid #939393; }
+    body .calculator__title {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 20px;
+      text-decoration: underline; }
+    body .calculator label {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 5px;
+      font-weight: 500; }
+    body .calculator input {
+      margin-bottom: 13px;
+      padding: 5px 8px;
+      width: 100%; }
+    body .calculator .calculate-btn {
+      display: flex;
+      justify-content: center; }
+      body .calculator .calculate-btn button {
+        color: #fff;
+        cursor: pointer; }
