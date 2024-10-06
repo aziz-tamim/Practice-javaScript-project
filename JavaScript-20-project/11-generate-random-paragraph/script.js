@@ -7,7 +7,7 @@ function generate() {
         const paragraph = document.createElement('p');
         paragraph.innerText = generateRandomParagraph();
         dataDiv.appendChild(paragraph);
-    } 
+    }
 }
 
 function generateRandomParagraph() {
