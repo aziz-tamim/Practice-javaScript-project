@@ -7,5 +7,8 @@ document.getElementById("calculate").addEventListener("click", function() {
 
     const totalInterest = (monthlyPayment * loanTerm) - loanAmount;
     const resultElement = document.querySelector(".final-result");
-
+    resultElement.innerHTML = `Monthly Payment: ${monthlyPayment.toFixed(2)}<br />
+    </br>
+    Total Interest: ${totalInterest.toFixed(2)}
+    `;
 });
