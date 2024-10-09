@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator Application</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
     <div class="tip_calculator">
@@ -12,12 +13,32 @@
             <label>Bill Amount:</label>
             <input type="text" placeholder="Enter the bill amount" id="billAmount">
 
-            <label class="">Service Rating:</label>
-            <select name="" id="">
-                <label for="poor">Poor</label>
-                <label for="average">Average</label>
+            <label>Service Rating:</label>
+            <select name="servicerating" id="serviceRating">
+                <option value="poor">Poor</option>
+                <option value="average">Average</option>
+                <option value="good">Good</option>
+                <option value="excellent">Excellent</option>
+            </select>
+
+            <label>Number of People:</label>
+            <input type="text" id="numberOfPeople" placeholder="Enter the number of people">
+
+            <label>Meal Type:</label>
+            <select name="mealtype" id="mealType">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
             </select>
         </div>
+        <div id="result">
+            <h3 class="result">Result:</h3>
+        </div>
+        <div class="claculate">
+            <button class="calculate-btn" id="calculateBtn">Calculate</button>
+        </div>
     </div>
+
+    
 </body>
 </html>
