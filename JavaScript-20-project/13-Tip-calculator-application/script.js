@@ -15,6 +15,13 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     case 'good':
         tipPercentage = 0.15;
         break;
-    
+    case 'excellent':
+        tipPercentage = 0.20;
+        break;
+    default:
+        tipPercentage = 0.10;
   }
+
+  let tipAmount = billAmount * tipPercentage;
+  let totalPerPerson = (billAmount + tipAmount) / billAmount;
 })
