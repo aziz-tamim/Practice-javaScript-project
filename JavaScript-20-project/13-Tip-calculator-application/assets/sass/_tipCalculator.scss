@@ -1,101 +1,101 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #54485a;
+  color: #fff;
+  padding: 15px 0 0 0;
+
+  .tip_calculator {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #54485a;
-    color: #fff;
-    padding: 15px 0 0 0;
+    flex-direction: column;
+    width: 450px;
+    background-color: #242323;
+    padding: 25px 15px 15px 15px;
+    border-radius: 5px;
 
-    .tip_calculator {
-        display: flex;
-        flex-direction: column;
-        width: 450px;
-        background-color: #242323;
-        padding: 25px 15px 15px 15px;
-        border-radius: 5px;
-
-        &-title {
-            text-align: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            font-size: 22px;
-            border-bottom: 1px solid #eae8e8;
-        }
-
-        .form {
-            label {
-                display: block;
-                margin-bottom: 5px;
-                font-weight: 600;
-            }
-            
-            input {
-                width: 100%;
-                padding: 7px 7px;
-                background-color: transparent;
-                border: 1px solid #ca0449;
-                border-radius: 4px;
-                color: #cac8c8;
-                margin-bottom: 15px;
-                &::placeholder {
-                    color: #9b9090;
-                }
-                &:focus {
-                    outline: none;
-                }
-            }
-
-            #mealType {
-                margin-bottom: 20px;
-            }
-
-            select {
-                margin-bottom: 15px;
-                width: 100%;
-                background-color: transparent;
-                padding: 7px 7px;
-                border: 1px solid #ca0449;
-                border-radius: 4px;
-                color: #fff;
-                &:focus {
-                    outline: none;
-                }
-                option {
-                    background-color: #242323;
-                    font-size: 14px;
-                }
-            }
-        }
-
-        #result {
-            border-top: 1px solid #eae8e8;
-            padding-top: 27px;
-            margin-bottom: 13px;
-        }
-
-        .calculate {
-            &-btn {
-                padding: 8px 12px;
-                background-color: #fd1667;
-                border: 0;
-                border-radius: 3px;
-                cursor: pointer;
-                color: #fff;
-                transition: 0.3s;
-                font-size: 15px;
-                &:hover {
-                    background-color: #b1144b;
-                }
-            }
-        }
+    &-title {
+      text-align: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      font-size: 22px;
+      border-bottom: 1px solid #eae8e8;
     }
+
+    .form {
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      input {
+        width: 100%;
+        padding: 7px 7px;
+        background-color: transparent;
+        border: 1px solid #ca0449;
+        border-radius: 4px;
+        color: #cac8c8;
+        margin-bottom: 15px;
+        &::placeholder {
+          color: #9b9090;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+
+      #mealType {
+        margin-bottom: 20px;
+      }
+
+      select {
+        margin-bottom: 15px;
+        width: 100%;
+        background-color: transparent;
+        padding: 7px 7px;
+        border: 1px solid #ca0449;
+        border-radius: 4px;
+        color: #fff;
+        &:focus {
+          outline: none;
+        }
+        option {
+          background-color: #242323;
+          font-size: 14px;
+        }
+      }
+    }
+
+    #result {
+      border-top: 1px solid #eae8e8;
+      padding-top: 27px;
+      margin-bottom: 13px;
+    }
+
+    .calculate {
+      &-btn {
+        padding: 8px 12px;
+        background-color: #fd1667;
+        border: 0;
+        border-radius: 3px;
+        cursor: pointer;
+        color: #fff;
+        transition: 0.3s;
+        font-size: 15px;
+        &:hover {
+          background-color: #b1144b;
+        }
+      }
+    }
+  }
 }
