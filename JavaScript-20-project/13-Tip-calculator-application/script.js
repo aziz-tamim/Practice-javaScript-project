@@ -22,7 +22,6 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
             tipPercentage = 0.10;
     }
 
-
     let tipAmount = billAmount * tipPercentage;
 
     let totalPerPerson = (billAmount + tipAmount) / numberOfPeople;
