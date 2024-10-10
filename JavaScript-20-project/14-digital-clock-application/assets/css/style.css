@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000; }
+  body .clock {
+    font-size: 60px;
+    color: #17D4FE;
+    font-family: "Orbitron";
+    letter-spacing: 7px;
+    font-weight: 700; }
