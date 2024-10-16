@@ -2,275 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <title>Simple To-Do List</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-    box-sizing: border-box;
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: #f7f7f7;
-}
-
-.container {
-    max-width: 350px;
-    margin: 30px auto;
+.todo-container {
+    background-color: white;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
-h2 {
+h1 {
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.balance {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.inc-exp-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+input {
+    width: 100%;
     padding: 10px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.inc-exp-container > div {
-    width: 45%;
-    text-align: center;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.money {
-    font-size: 20px;
-    margin-top: 5px;
+button:hover {
+    background-color: #4cae4c;
 }
 
-.money.plus {
-    color: #2ecc71;
-}
-
-.money.minus {
-    color: #c0392b;
-}
-
-.list {
+ul {
     list-style-type: none;
-    max-height: 200px;
-    overflow-y: auto;
-    margin-bottom: 20px;
+    padding: 0;
 }
 
-.list li {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f1f1f1;
+li {
+    background-color: #eee;
     padding: 10px;
     margin: 5px 0;
-    border-right: 5px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.list li.plus {
-    border-color: #2ecc71;
+li.completed {
+    text-decoration: line-through;
+    color: gray;
 }
 
-.list li.minus {
-    border-color: #c0392b;
-}
-
-.delete-btn {
-    background-color: transparent;
+button.delete {
+    background-color: #d9534f;
+    color: white;
     border: none;
-    color: #e74c3c;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.form-control {
-    margin-bottom: 10px;
-}
-
-.form-control label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-control input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #dedede;
-    border-radius: 3px;
-}
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #9b59b6;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #8e44ad;
+button.delete:hover {
+    background-color: #c9302c;
 }
 
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Expense Tracker</h2>
-        <div class="balance">
-            <h3>Your Balance</h3>
-            <h1 id="balance">$0.00</h1>
-        </div>
-        <div class="inc-exp-container">
-            <div>
-                <h4>Income</h4>
-                <p id="money-plus" class="money plus">$0.00</p>
-            </div>
-            <div>
-                <h4>Expense</h4>
-                <p id="money-minus" class="money minus">$0.00</p>
-            </div>
-        </div>
-        <h3>History</h3>
-        <ul id="transactions" class="list">
-            <!-- Transactions will be appended here -->
-        </ul>
-        <h3>Add new transaction</h3>
-        <form id="form">
-            <div class="form-control">
-                <label for="text">Description</label>
-                <input type="text" id="text" placeholder="Enter description..." required>
-            </div>
-            <div class="form-control">
-                <label for="amount">
-                    Amount <br />
-                    (negative - expense, positive - income)
-                </label>
-                <input type="number" id="amount" placeholder="Enter amount..." required>
-            </div>
-            <button type="submit" class="btn">Add Transaction</button>
-        </form>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task..." />
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="todoList"></ul>
     </div>
-    
+
     <script>
-        // Select DOM elements
-const balance = document.getElementById('balance');
-const moneyPlus = document.getElementById('money-plus');
-const moneyMinus = document.getElementById('money-minus');
-const transactionsList = document.getElementById('transactions');
-const form = document.getElementById('form');
-const text = document.getElementById('text');
-const amount = document.getElementById('amount');
+// Select elements
+const taskInput = document.getElementById('taskInput');
+const addTaskBtn = document.getElementById('addTaskBtn');
+const todoList = document.getElementById('todoList');
 
-// Retrieve transactions from localStorage or initialize empty array
-let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+// Add event listener for the Add Task button
+addTaskBtn.addEventListener('click', addTask);
 
-// Function to add transaction to DOM
-function addTransactionDOM(transaction) {
-    // Create list item
-    const li = document.createElement('li');
-    // Determine sign based on amount
-    li.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
-    li.innerHTML = `
-        ${transaction.text} 
-        <span>${formatCurrency(transaction.amount)}</span>
-        <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
-    `;
-    transactionsList.appendChild(li);
-}
+// Function to add a task
+function addTask() {
+    const taskText = taskInput.value.trim();
 
-// Function to format number as currency
-function formatCurrency(amount) {
-    const sign = amount < 0 ? '-' : '+';
-    const formattedAmount = Math.abs(amount).toLocaleString(undefined, { style: 'currency', currency: 'USD' });
-    return `${sign}${formattedAmount}`;
-}
+    if (taskText !== '') {
+        const li = document.createElement('li');
 
-// Function to update the balance, income, and expense
-function updateValues() {
-    const amounts = transactions.map(transaction => transaction.amount);
-    const total = amounts.reduce((acc, item) => acc + item, 0).toFixed(2);
-    const income = amounts
-        .filter(item => item > 0)
-        .reduce((acc, item) => acc + item, 0)
-        .toFixed(2);
-    const expense = (
-        amounts
-            .filter(item => item < 0)
-            .reduce((acc, item) => acc + item, 0) * -1
-    ).toFixed(2);
+        // Create task text
+        li.appendChild(document.createTextNode(taskText));
 
-    balance.innerText = formatCurrency(total);
-    moneyPlus.innerText = formatCurrency(income);
-    moneyMinus.innerText = formatCurrency(expense);
-}
+        // Create delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.appendChild(document.createTextNode('Delete'));
+        deleteBtn.className = 'delete';
+        deleteBtn.onclick = removeTask;
 
-// Function to remove transaction by id
-function removeTransaction(id) {
-    transactions = transactions.filter(transaction => transaction.id !== id);
-    updateLocalStorage();
-    init();
-}
+        // Add delete button to the list item
+        li.appendChild(deleteBtn);
 
-// Function to add new transaction
-function addTransaction(e) {
-    e.preventDefault();
+        // Add the list item to the todo list
+        todoList.appendChild(li);
 
-    if (text.value.trim() === '' || amount.value.trim() === '') {
-        alert('Please enter a description and amount.');
-        return;
+        // Clear the input field
+        taskInput.value = '';
+
+        // Mark task as completed when clicked
+        li.addEventListener('click', toggleCompleted);
     }
-
-    const transaction = {
-        id: generateID(),
-        text: text.value,
-        amount: +amount.value
-    };
-
-    transactions.push(transaction);
-    addTransactionDOM(transaction);
-    updateValues();
-    updateLocalStorage();
-
-    text.value = '';
-    amount.value = '';
 }
 
-// Generate unique ID
-function generateID() {
-    return Math.floor(Math.random() * 100000000);
+// Function to toggle the 'completed' state of a task
+function toggleCompleted(e) {
+    if (e.target.tagName !== 'BUTTON') {
+        e.target.classList.toggle('completed');
+    }
 }
 
-// Function to update localStorage
-function updateLocalStorage() {
-    localStorage.setItem('transactions', JSON.stringify(transactions));
+// Function to remove a task
+function removeTask(e) {
+    const li = e.target.parentNode;
+    todoList.removeChild(li);
 }
-
-// Initialize app
-function init() {
-    transactionsList.innerHTML = '';
-    transactions.forEach(addTransactionDOM);
-    updateValues();
-}
-
-init();
-
-// Event Listener
-form.addEventListener('submit', addTransaction);
 
     </script>
 </body>
