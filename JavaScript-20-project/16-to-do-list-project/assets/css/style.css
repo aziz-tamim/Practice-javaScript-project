@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px; }
+  .container .todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px; }
+    .container .todo-app h2 {
+      text-align: center;
+      color: #002765; }
+    .container .todo-app .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #edeef0; }
