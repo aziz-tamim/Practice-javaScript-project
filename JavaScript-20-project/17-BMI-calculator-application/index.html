@@ -13,7 +13,7 @@
             <label>Gender:</label>
             <select name="gender" id="gender">
                 <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="female">female</option>
             </select>
 
             <label>Age:</label>
@@ -21,12 +21,16 @@
 
             <label>Height:</label>
             <input type="number" id="feet" placeholder="Feet" />
-            <input type="number" id="inches" placeholder="inches" />
+            <input type="number" id="inches" placeholder="Inches" />
 
             <label>Weight:</label>
             <input type="number" id="weight" placeholder="Enter Weight in KG" />
         </div>
-        <button id="bmiBtn">Calculate BMI</button>
+        <div class="bmi-button">
+            <button id="bmiBtn">Calculate BMI</button>
+        </div>
+        <p id="result"></p>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
