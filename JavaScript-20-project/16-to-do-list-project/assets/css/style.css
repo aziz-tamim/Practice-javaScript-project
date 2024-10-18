@@ -52,7 +52,8 @@
       padding: 0px 15px 0 15px;
       display: flex;
       justify-content: space-between;
-      user-select: none; }
+      user-select: none;
+      margin-bottom: 5px; }
       .container .todo-app ul li span {
         cursor: pointer;
         font-size: 19px; }
