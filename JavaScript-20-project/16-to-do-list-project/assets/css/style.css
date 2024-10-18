@@ -20,7 +20,8 @@
     border-radius: 10px; }
     .container .todo-app h2 {
       text-align: center;
-      color: #002765; }
+      color: #002765;
+      margin-bottom: 20px; }
     .container .todo-app .row {
       display: flex;
       align-items: center;
@@ -51,8 +52,7 @@
       padding: 0px 15px 0 15px;
       display: flex;
       justify-content: space-between;
-      user-select: none;
-      align-items: center; }
+      user-select: none; }
       .container .todo-app ul li span {
         cursor: pointer;
         font-size: 19px; }

@@ -23,6 +23,7 @@
         h2 {
             text-align: center;
             color: #002765;
+            margin-bottom: 20px;
         }
 
         .row {
@@ -62,7 +63,6 @@
                 display: flex;
                 justify-content: space-between;
                 user-select: none;
-                align-items: center;
                 span {
                     cursor: pointer;
                     font-size: 19px;
