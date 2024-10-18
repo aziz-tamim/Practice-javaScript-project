@@ -35,7 +35,7 @@ window.onload = function () {
     newTask.appendChild(crossIcon);
     listContainer.appendChild(newTask);
   
-    crossIcon.addEventListener("click", function () {
+    crossIcon.addEventListener("click", function() {
       if (confirm("Are you sure you want to delete this task?")) {
         listContainer.removeChild(newTask);
         removeTaskLocalStorage(task);
