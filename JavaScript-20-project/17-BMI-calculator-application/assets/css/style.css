@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #544851;
+  color: #fff;
+  height: 100vh; }
+  body .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    background-color: #cdc1c1;
+    border-radius: 10px;
+    padding: 18px; }
+    body .container h2 {
+      text-align: center;
+      color: #000;
+      margin-bottom: 18px;
+      text-decoration: underline; }
+    body .container .form label {
+      color: #000;
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold; }
+    body .container .form select {
+      width: 95%;
+      margin-bottom: 15px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 15px; }
+    body .container .form #feet {
+      margin-bottom: 10px; }
+    body .container .form input {
+      display: block;
+      width: 95%;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 10px;
+      font-size: 15px; }
+      body .container .form input::placeholder {
+        color: #000; }
+      body .container .form input:focus {
+        outline: none; }
+    body .container .bmi-button button {
+      width: 95%;
+      cursor: pointer;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 0px;
+      border-radius: 20px;
+      transition: 0.3s;
+      font-size: 16px; }
+      body .container .bmi-button button:hover {
+        background-color: #352f2f; }
+    body .container #result {
+      padding: 15px 0px;
+      font-weight: bold;
+      color: #000; }
+      body .container #result p {
+        margin-bottom: 8px; }
