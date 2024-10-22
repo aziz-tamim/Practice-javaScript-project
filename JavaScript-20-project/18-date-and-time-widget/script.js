@@ -1,7 +1,7 @@
-let dateContainer = document.querySelector('date-container');
+let dateContainer = document.querySelector('.date-container');
 let hoursContainer = document.querySelector('.hours');
-let minutesContainer = document.querySelector('minutes');
-let secondsContainer = document.querySelector('seconds');
+let minutesContainer = document.querySelector('.minutes');
+let secondsContainer = document.querySelector('.seconds');
 
 const weekdays = [
     "Sunday",
@@ -34,16 +34,19 @@ function formatTime(time) {
 
 function updateClock() {
     const today = new Date();
-    // console.log(today);
     let date = today.getDate();
-    // console.log(date);
     let day = weekdays[today.getDay()];
     let month = monthNames[today.getMonth()];
+    
+    let hours = formatTime(today.getHours());
+    let minutes = formatTime(today.getMinutes());
+    let seconds = formatTime(today.getSeconds());
 
-    let hours = formatTime[today.getHours()];
-    let minutes = formatTime[today.getMinutes()];
-    let seconds = formatTime[today.getSeconds()];
-    dateContainer.innerHTML = `<p>${day}</p><p><span>${date}</span></p><p>${month}</p>`
+    dateContainer.innerHTML = `<p>${day}</p><p><span>${date}</span></p><p>${month}</p>`;
+
+    hoursContainer.textContent = hours + ":";
+    minutesContainer.textContent = minutes + ":";
+    secondsContainer.textContent = seconds;
 }
 
-updateClock();
+setInterval(updateClock, 1000);
