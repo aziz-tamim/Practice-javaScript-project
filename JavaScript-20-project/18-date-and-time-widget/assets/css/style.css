@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+body {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center; }
+  body .container {
+    background-color: #1e90ff;
+    width: 35.87em;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 8fr 4fr;
+    border-radius: 0.5em;
+    animation: neon-glow 1.5s ease-in-out infinite alternate; }
+    body .container .clock-container {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      font-size: 3.75em;
+      margin-left: 0.2em;
+      border-radius: 0.1em;
+      padding: 0.2em 0;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      body .container .clock-container span {
+        width: 120px;
+        display: inline-block;
+        text-align: center; }
+      body .container .clock-container .hours {
+        color: #ff0000; }
+      body .container .clock-container .minutes {
+        color: #00ff00; }
+      body .container .clock-container .seconds {
+        color: #0000ff; }
+    body .container .date-container {
+      padding: 10px;
+      background-color: #2784e0;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px; }
+      body .container .date-container span {
+        font-size: 2.5em; }
+
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 5px #ffffff, 0 0 20px #ffffff; }
+  100% {
+    box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff; } }
