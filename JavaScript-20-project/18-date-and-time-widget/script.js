@@ -34,7 +34,16 @@ function formatTime(time) {
 
 function updateClock() {
     const today = new Date();
-    console.log(today);
+    // console.log(today);
+    let date = today.getDate();
+    // console.log(date);
+    let day = weekdays[today.getDay()];
+    let month = monthNames[today.getMonth()];
+
+    let hours = formatTime[today.getHours()];
+    let minutes = formatTime[today.getMinutes()];
+    let seconds = formatTime[today.getSeconds()];
+    dateContainer.innerHTML = `<p>${day}</p><p><span>${date}</span></p><p>${month}</p>`
 }
 
 updateClock();
