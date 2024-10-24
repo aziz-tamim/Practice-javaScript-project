@@ -29,6 +29,6 @@ function calculateAge() {
   ).innerHTML = `<p>Your age is <strong>${ageYears}</strong> years, <strong>${ageMonths}</strong> months, and <strong>${ageDays}</strong> days.</p>`;
 }
 
-function daysInMonth() {
-    
+function daysInMonth(age, month) {
+    return new Date(year, month + 1, 0).getDate();
 }
