@@ -79,7 +79,7 @@ function updateDOM() {
 }
 
 function updateLocalStorage() {
-  localStorage.setItem("transactions", JSON.stringify(transactions));
+    localStorage.setItem("transactions", JSON.stringify(transactions));
 }
 
 function init() {

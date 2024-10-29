@@ -6,7 +6,7 @@ function calculateAge() {
       "Please select your date of birth.";
     return;
   }
-  
+
   let birth = new Date(birthDate);
   let today = new Date();
 
@@ -16,7 +16,6 @@ function calculateAge() {
   if (ageDays < 0) {
     ageMonths--;
     ageDays += daysInMonth(today.getMonth() - 1, today.getFullYear());
-
   }
 
   if (ageMonths < 0) {
@@ -30,5 +29,5 @@ function calculateAge() {
 }
 
 function daysInMonth(month, month) {
-    return new Date(year, month + 1, 0).getDate();
+  return new Date(year, month + 1, 0).getDate();
 }
